@@ -26,7 +26,7 @@ jobs:
       - name: Install conda environment with micromamba
         uses: mamba-org/setup-micromamba@v1
         with:
-          micromamba-version: '2.0.0'
+          micromamba-version: 'latest'
           environment-file: false
           environment-name: "kinkal-test-env"
           channels: conda-forge,defaults
