@@ -34,10 +34,6 @@ jobs:
             root=${{ matrix.root-version }}
             cxx-compiler
             cmake
-          condarc : |
-            channels:
-              - conda-forge
-              - defaults
       - name: CMake (${{ matrix.build-type }})
         run: |
           cd ..
