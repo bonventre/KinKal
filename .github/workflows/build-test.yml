@@ -29,13 +29,16 @@ jobs:
           micromamba-version: 'latest'
           environment-file: false
           environment-name: "kinkal-test-env"
-          channels: conda-forge,defaults
-          channel-priority: strict
-          extra-specs: |
+          create-args: >-
             python=${{ matrix.python-version }}
             root=${{ matrix.root-version }}
             cxx-compiler
             cmake
+          condarc : |
+            channels:
+              - conda-forge
+              - defaults
+            channel-priority: strict
       - name: CMake (${{ matrix.build-type }})
         run: |
           cd ..
