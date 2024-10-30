@@ -27,7 +27,6 @@ jobs:
         uses: mamba-org/setup-micromamba@v1
         with:
           micromamba-version: 'latest'
-          environment-file: false
           environment-name: "kinkal-test-env"
           create-args: >-
             python=${{ matrix.python-version }}
